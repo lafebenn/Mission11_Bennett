@@ -9,3 +9,6 @@ node_modules/
 .idea/
 *.user
 .vs/
+
+# BookstoreAPI: ignore TFMs even when output lives under a misnamed folder (e.g. bin\Debug)
+BookstoreAPI/**/net10.0/
