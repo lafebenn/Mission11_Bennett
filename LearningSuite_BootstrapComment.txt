@@ -1,0 +1,11 @@
+Hi — for the Bootstrap part of Mission 12, here’s what I added beyond the usual layout stuff:
+
+I used Bootstrap’s grid everywhere the books and cart sit side by side: fluid container, rows, gutters, and column breakpoints (for example the main list is wide on large screens and stacks on small ones).
+
+The two things I tried that we didn’t really cover in lecture are:
+
+1) Offcanvas — On smaller screens there’s a “Cart” button that slides a panel in from the right. That’s Bootstrap’s offcanvas (the element with id cartOffcanvas in BookList.tsx), wired up with the data-bs-toggle / data-bs-target attributes like the docs show.
+
+2) Toast — When you click Add on a book, a little toast pops up in the bottom-right to confirm it was added. That uses Bootstrap’s toast markup plus their JavaScript (Toast.getOrCreateInstance) in BookList.tsx, with the bundle imported in main.tsx so the behavior actually runs.
+
+Thanks!
