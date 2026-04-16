@@ -2,6 +2,7 @@ import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import BookList from './BookList';
 import CartPage from './pages/CartPage';
+import AdminBooks from './pages/AdminBooks';
 import { CartProvider, useCart } from './context/CartContext';
 
 function Navbar() {
@@ -48,6 +49,16 @@ function Navbar() {
                 <span className="badge text-bg-light text-dark">{itemCount}</span>
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? ' active' : ''}`
+                }
+                to="/adminbooks"
+              >
+                Admin
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,6 +73,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<BookList />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/adminbooks" element={<AdminBooks />} />
       </Routes>
     </>
   );

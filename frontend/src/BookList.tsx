@@ -3,8 +3,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import * as bootstrap from 'bootstrap';
 import type { Book } from './types/Book';
 import { useCart } from './context/CartContext';
-
-const API_BASE = 'http://localhost:5039';
+import { API_BASE } from './apiBase';
 
 function useBookListQuery() {
   const [searchParams, setSearchParams] = useSearchParams();
